@@ -2,7 +2,7 @@
 
 __**警告：当前版本是根据一次抓取数据写成的，尚在等待测试，极有可能工作不正常。**__
 
-Fork自TechCiel/jlu-health-reporter
+Fork自TechCiel/jlu-health-reporter[链接](https://github.com/TechCiel/jlu-health-reporter)
 
 为吉林大学本科生每日健康打卡所作的自动机器人。（三测温一点名版）
 
