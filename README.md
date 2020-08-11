@@ -1,10 +1,10 @@
-# JLU Health Reporter
+# JLU Daily Reporter
 
 __**警告：当前版本是根据一次抓取数据写成的，尚在等待测试，极有可能工作不正常。**__
 
 Fork自TechCiel/jlu-health-reporter[链接](https://github.com/TechCiel/jlu-health-reporter)
 
-为吉林大学本科生每日健康打卡所作的自动机器人。（三测温一点名版）
+为吉林大学本科生每日打卡所作的自动机器人。（三测温一点名版）
 
 以 WTFPL 授权开源。
 
@@ -24,21 +24,49 @@ __**如运行本程序，您理解并认可，本自动程序的一切操作均�
 
 运行之前**先登录平台提交一次打卡**，务必确保信息准确。
 
-把文件开头的 `USERS` 中的示例用户名和密码换为自己的，支持多帐号但不建议过多，避免错过打卡窗口期。
+参照 example-config.json 建立配置文件 config.json ，填入登录信息和对应表单项的值（注意均使用字符串值）。
+目前尚未适配校外居住 请见谅
 
-若为**研究生健康申报**使用，请先改变文件开头的 `TRANSACTION` 。
+```json
+{
+	"transacation": "BKSMRDK",
+	"users": [
+		{
+			"username": "zhangsan2120",
+			"password": "password",
+			"fields": {
+				"fieldSQxq": "1",//校区号
+				"fieldSQgyl": "1",//公寓号
+				"fieldSQqsh": "1088"//寝室号
+			}
+		},
+		{
+			"username": "lisi2120",
+			"password": "password",
+			"fields": {
+				"fieldSQxq": "1",
+				"fieldSQgyl": "1",
+				"fieldSQqsh": "1088"
+			}
+		}
+	]
+}
+
+```
+
+
 
 Crontab 模式：
 
 ```
-5 7,11,17,21 * * * /usr/bin/python3 /path/to/jlu-health-reporter.py >> reporter.log 2>&1
+5 7,11,17,21 * * * /usr/bin/python3 /path/to/jlu-daily-reporter.py >> reporter.log 2>&1
 # 5分开始避免服务器时间略有偏差导致失败
 ```
 
 手动模式（请在时段内启动）：
 
 ```
-./jlu-health-reporter.py
+./jlu-daily-reporter.py
 ```
 
 ## 联系
