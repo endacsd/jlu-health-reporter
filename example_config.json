@@ -1,0 +1,23 @@
+{
+	"transacation": "BKSMRDK",
+	"users": [
+		{
+			"username": "zhangsan2120",
+			"password": "password",
+			"fields": {
+				"fieldSQxq": "1",
+				"fieldSQgyl": "1",
+				"fieldSQqsh": "1088"
+			}
+		},
+		{
+			"username": "lisi2120",
+			"password": "password",
+			"fields": {
+				"fieldSQxq": "1",
+				"fieldSQgyl": "1",
+				"fieldSQqsh": "1088"
+			}
+		}
+	]
+}
