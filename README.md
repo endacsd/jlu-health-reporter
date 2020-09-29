@@ -29,7 +29,7 @@ __**如运行本程序，您理解并认可，本自动程序的一切操作均�
 
 ```json
 {
-	"transacation": "BKSMRDK",
+	"transaction": "BKSMRDK",
 	"users": [
 		{
 			"username": "zhangsan2120",
